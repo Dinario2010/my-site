@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Лекция: Нейросети для жизни и карьеры</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -26,6 +27,10 @@
     h1 {
       font-size: 36px;
       margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 28px;
+      margin-top: 0;
     }
     .section {
       padding: 40px 20px;
@@ -85,14 +90,14 @@
 </head>
 <body>
 
-<header>
+<header data-aos="zoom-in" data-aos-duration="1200">
   <img src="https://zerocoder.ru/wp-content/uploads/2024/03/logo-ai-gradient.png" alt="Логотип ИИ" />
   <h1>Нейросети для жизни и карьеры в 2025</h1>
   <p>Открытая лекция — 21 апреля в 13:00 МСК</p>
 </header>
 
 <section class="section">
-  <div class="highlight">
+  <div class="highlight" data-aos="fade-up">
     <h2>Что вы узнаете:</h2>
     <ul>
       <li>Как применять нейросети в жизни и бизнесе</li>
@@ -102,7 +107,7 @@
     </ul>
   </div>
 
-  <div>
+  <div data-aos="fade-up" data-aos-delay="100">
     <h2>ТОП-бонусы для участников:</h2>
     <img class="bonus-img" src="https://zerocoder.ru/wp-content/uploads/2024/03/bonus-pack-neuro.png" alt="Бонусы нейросети" />
     <ul class="bonus-list">
@@ -113,7 +118,7 @@
     </ul>
   </div>
 
-  <div>
+  <div data-aos="fade-up" data-aos-delay="200">
     <h2>Кому подойдёт:</h2>
     <ul>
       <li>IT и digital-специалистам</li>
@@ -125,7 +130,7 @@
 </section>
 
 <section class="section">
-  <div class="form">
+  <div class="form" data-aos="zoom-in">
     <h2>Принять участие бесплатно</h2>
     <form action="https://t.me/Jonlyc" method="get">
       <input type="text" name="name" placeholder="Ваше имя" required />
@@ -136,10 +141,17 @@
   </div>
 </section>
 
-<footer>
+<footer data-aos="fade-in" data-aos-delay="300">
   Telegram: <a href="https://t.me/Jonlyc" target="_blank">@Jonlyc</a><br/>
   © 2025
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true
+  });
+</script>
 
 </body>
 </html>
