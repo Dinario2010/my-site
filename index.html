@@ -1,26 +1,27 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIстратегия — Внедрение ИИ в ваш бизнес</title>
+  <title>AIстратегия — Внедрение ИИ</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
 
-  <!-- AOS -->
+  <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
   <style>
     * {
       box-sizing: border-box;
     }
-    html, body {
+
+    body, html {
       margin: 0;
       padding: 0;
-      background-color: #0B0E11;
       font-family: 'Poppins', sans-serif;
-      color: #fff;
+      background-color: #0B0E11;
+      color: white;
       scroll-behavior: smooth;
     }
 
@@ -28,12 +29,11 @@
       width: 100%;
       height: 100vh;
       position: relative;
-      overflow: hidden;
     }
 
     header {
       position: absolute;
-      top: 40%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
@@ -43,12 +43,13 @@
     h1 {
       font-size: 48px;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
     .typed-text {
-      font-size: 22px;
+      font-size: 20px;
       color: #aaa;
+      margin-top: 10px;
     }
 
     section {
@@ -62,7 +63,7 @@
       margin-bottom: 20px;
     }
 
-    p, li, textarea, input {
+    p, li {
       font-size: 18px;
       line-height: 1.6;
     }
@@ -96,24 +97,23 @@
     footer {
       text-align: center;
       padding: 40px;
-      color: #555;
       font-size: 14px;
-      background-color: #0A0A0A;
+      color: #555;
+      background-color: #000;
     }
 
     .lottie-container {
       max-width: 600px;
-      margin: 0 auto 60px auto;
+      margin: 0 auto 40px auto;
     }
 
     img.responsive {
-      max-width: 100%;
+      width: 100%;
       border-radius: 10px;
       margin-top: 20px;
     }
   </style>
 </head>
-
 <body>
 
 <div id="vanta-bg">
@@ -124,39 +124,33 @@
 </div>
 
 <section data-aos="fade-up">
-  <h2>Почему именно мы?</h2>
-  <p>Компания «AIстратегия» внедряет искусственный интеллект в любые бизнес-направления — от малого до корпоративного уровня. Мы подбираем технологии под задачи, автоматизируем процессы и сопровождаем проекты после запуска.</p>
-  <img src="https://source.unsplash.com/960x400/?ai,technology" class="responsive" alt="AI image" />
+  <h2>Почему AIстратегия?</h2>
+  <p>Мы создаём и внедряем ИИ в любые процессы — от маркетинга до автоматизации. Помогаем бизнесу оптимизировать ресурсы, принимать стратегические решения на основе данных и внедрять технологии будущего уже сегодня.</p>
 </section>
 
 <section data-aos="fade-up">
-  <h2>Возможности ИИ для бизнеса</h2>
+  <h2>Возможности ИИ</h2>
   <div class="lottie-container" id="lottie-tech"></div>
   <ul>
-    <li>Автоматизация рутинных операций</li>
-    <li>Предиктивная аналитика и big data</li>
-    <li>ИИ-ассистенты, чат-боты</li>
-    <li>Оптимизация маркетинга и обслуживания</li>
+    <li>Автоматизация задач</li>
+    <li>Предиктивная аналитика</li>
+    <li>ИИ-ассистенты и чат-боты</li>
+    <li>Оптимизация бизнес-процессов</li>
   </ul>
 </section>
 
 <section data-aos="fade-up">
-  <h2>Как мы работаем</h2>
+  <h2>Этапы внедрения</h2>
   <ol>
-    <li>Анализ целей и процессов</li>
-    <li>Разработка ИИ-модели</li>
-    <li>Внедрение и интеграция</li>
-    <li>Обучение сотрудников</li>
-    <li>Сопровождение и улучшения</li>
+    <li>Анализ задач и целей</li>
+    <li>Подбор и обучение моделей</li>
+    <li>Интеграция с вашими системами</li>
+    <li>Обучение команды</li>
+    <li>Сопровождение и развитие</li>
   </ol>
 </section>
 
 <section data-aos="fade-up">
-  <h2>Готовы внедрить ИИ?</h2>
-  <a href="#form" class="btn">Записаться на консультацию</a>
-</section>
-
-<section id="form" data-aos="fade-up">
   <h2>Оставьте заявку</h2>
   <form>
     <div class="form-group">
@@ -166,10 +160,7 @@
       <input type="email" placeholder="Email" required />
     </div>
     <div class="form-group">
-      <input type="tel" placeholder="Телефон" />
-    </div>
-    <div class="form-group">
-      <textarea rows="4" placeholder="Опишите задачу"></textarea>
+      <textarea rows="4" placeholder="Опишите ваш запрос"></textarea>
     </div>
     <button type="submit" class="btn">Отправить</button>
   </form>
@@ -187,17 +178,14 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
 <script>
-  AOS.init({
-    once: true,
-    duration: 1000
-  });
+  AOS.init({ once: true, duration: 1000 });
 
   // Typed.js
-  var typed = new Typed('#typed-text', {
-    strings: ['AIстратегия', 'Интеллектуальные решения', 'ИИ для вашего бизнеса'],
+  new Typed('#typed-text', {
+    strings: ['AIстратегия', 'ИИ для вашего бизнеса', 'Будущее начинается сегодня'],
     typeSpeed: 60,
     backSpeed: 30,
-    backDelay: 2000,
+    backDelay: 1500,
     loop: true
   });
 
@@ -207,8 +195,6 @@
     mouseControls: true,
     touchControls: true,
     minHeight: 500.00,
-    minWidth: 200
-    minHeight: 500.00,
     minWidth: 200.00,
     scale: 1.0,
     scaleMobile: 1.0,
@@ -216,15 +202,15 @@
     backgroundColor: 0x0b0e11
   });
 
-  // Lottie анимация
-  const lottieContainer = document.getElementById("lottie-tech");
-  lottieContainer.innerHTML = `
-    <lottie-player 
-      src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"  
-      background="transparent"  
-      speed="1"  
-      style="width: 100%; height: 300px;"  
-      loop autoplay>
+  // Lottie
+  document.getElementById("lottie-tech").innerHTML = `
+    <lottie-player
+      src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"
+      background="transparent"
+      speed="1"
+      style="width: 100%; height: 300px;"
+      loop
+      autoplay>
     </lottie-player>
   `;
 </script>
