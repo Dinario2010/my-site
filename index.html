@@ -1,175 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Открытая лекция: Нейросети</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIстратегия — Внедрение ИИ в ваш бизнес</title>
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS styles -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <style>
     body {
       margin: 0;
+      background-color: #0B0E11;
+      color: #ffffff;
       font-family: 'Poppins', sans-serif;
-      background: #fff;
-      color: #222;
     }
+
     header {
-      background: url('https://images.unsplash.com/photo-1669371793252-489fbbd98064?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      padding: 100px 20px;
-      color: white;
-      text-align: center;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      z-index: 0;
-    }
-    header .content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 36px;
-    }
-    p.lead {
-      font-size: 20px;
-      opacity: 0.9;
-    }
-    .section {
       padding: 60px 20px;
-      max-width: 960px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    .highlight {
-      background: #f2f0ff;
-      border-left: 4px solid #5e60ce;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .form {
-      background: #f9f9ff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      max-width: 600px;
-      margin: auto;
-    }
-    input, button, textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-    button {
-      background: linear-gradient(135deg, #5e60ce, #7400b8);
-      color: white;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background: linear-gradient(135deg, #6930c3, #7400b8);
-    }
-    footer {
-      background: #f0f0f0;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 14px;
+      background: linear-gradient(145deg, #7b61ff, #2d85f3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
     }
-    .gallery img {
-      width: 160px;
-      height: 100px;
-      object-fit: cover;
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #7b61ff, #2d85f3);
+      color: #fff;
+      padding: 15px 30px;
       border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 30px;
+    }
+
+    .gray {
+      color: #aaaaaa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #555;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="content">
-    <h1>Нейросети для жизни и карьеры</h1>
-    <p class="lead">Открытая лекция — 21 апреля, 13:00 МСК</p>
-  </div>
-</header>
+  <header data-aos="fade-down">
+    <h1>AIстратегия</h1>
+    <p class="gray">Интеллектуальные решения для вашего бизнеса</p>
+  </header>
 
-<section class="section">
-  <h2>Что вы узнаете:</h2>
-  <div class="highlight">
+  <section data-aos="fade-up">
+    <h2>Почему именно мы?</h2>
+    <p>Компания «AIстратегия» — это команда экспертов, которая внедряет искусственный интеллект в любые бизнес-направления: от малого до корпоративного уровня. Мы анализируем процессы, подбираем подходящие технологии, создаём интеллектуальные решения и сопровождаем после запуска.</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Что вы получите:</h2>
     <ul>
-      <li>Как применять нейросети в жизни и бизнесе</li>
-      <li>10 способов заработать на ИИ уже сейчас</li>
-      <li>Цифровые ассистенты и агенты — кейсы</li>
-      <li>Безопасная и эффективная работа с нейросетями</li>
+      <li>Автоматизация рутинных операций</li>
+      <li>Аналитика больших данных и прогнозирование</li>
+      <li>ИИ-ассистенты и чат-боты</li>
+      <li>Индивидуальные решения под задачи вашей отрасли</li>
     </ul>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <h2>Бонусы для участников:</h2>
-  <ul>
-    <li>PDF-инструкция по нейрофотосессии</li>
-    <li>Гайд по изучению языков через ChatGPT</li>
-    <li>Каталог 3800+ нейросетей</li>
-    <li>Доступ к ChatGPT-боту без ограничений</li>
-  </ul>
-</section>
+  <section data-aos="fade-up">
+    <h2>Как мы работаем</h2>
+    <ol>
+      <li>Анализ потребностей и целей</li>
+      <li>Выбор и обучение модели</li>
+      <li>Интеграция в процессы</li>
+      <li>Обучение персонала</li>
+      <li>Поддержка и обновление</li>
+    </ol>
+  </section>
 
-<section class="section">
-  <h2>Кому подойдёт:</h2>
-  <ul>
-    <li>IT и digital-специалистам</li>
-    <li>Маркетологам, предпринимателям</li>
-    <li>Фрилансерам, копирайтерам, дизайнерам</li>
-    <li>Тем, кто ищет новые источники дохода</li>
-  </ul>
-</section>
+  <section data-aos="fade-up">
+    <h2>Готовы внедрить ИИ в ваш бизнес?</h2>
+    <a href="#form" class="btn">Записаться на консультацию</a>
+  </section>
 
-<section class="section">
-  <h2>Партнёры и поддержка:</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1634551860823-67eae6a2c1a2?auto=format&fit=crop&w=400&q=80" alt="partner" />
-    <img src="https://images.unsplash.com/photo-1603381441835-1eec3d1c2225?auto=format&fit=crop&w=400&q=80" alt="partner" />
-    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80" alt="partner" />
-  </div>
-</section>
-
-<section class="section">
-  <h2>Регистрация на лекцию</h2>
-  <div class="form">
-    <form action="mailto:5915838@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Ваше имя" required />
-      <input type="tel" name="phone" placeholder="Телефон" required />
-      <textarea name="message" placeholder="Дополнительное сообщение (необязательно)"></textarea>
-      <button type="submit">Отправить заявку</button>
+  <section id="form" data-aos="fade-up">
+    <h2>Оставьте заявку</h2>
+    <form>
+      <input type="text" placeholder="Ваше имя" required /><br><br>
+      <input type="email" placeholder="Email" required /><br><br>
+      <input type="tel" placeholder="Телефон" /><br><br>
+      <textarea placeholder="Опишите задачу" rows="4"></textarea><br><br>
+      <button type="submit" class="btn">Отправить</button>
     </form>
-    <p style="text-align:center; font-size: 14px;">* Заявка откроется в вашем почтовом клиенте</p>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>Telegram: <a href="https://t.me/Jonlyc" target="_blank">@Jonlyc</a></p>
-  <p>© 2025</p>
-</footer>
+  <footer data-aos="fade-up">
+    © 2025 AIстратегия. Все права защищены.
+  </footer>
+
+  <!-- AOS scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000
+    });
+  </script>
 
 </body>
 </html>
