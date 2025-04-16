@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -5,42 +7,46 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   background-color: #0B0E11;
   color: white;
   scroll-behavior: smooth;
 }
 
+/* VANTA background container */
 #vanta-bg {
+  width: 100%;
+  height: 100vh;
   position: relative;
-  z-index: 1;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
+/* Header section */
 header {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 10;
   color: white;
-  font-family: 'Share Tech Mono', monospace;
 }
 
-h1, .typed-text {
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 0;
   color: #00ff00;
-  text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
-  font-size: 28px;
+  text-shadow: 0 0 8px #00ff00;
 }
 
 .typed-text {
-  font-size: 20px;
+  font-size: 18px;
   color: #aaa;
   margin-top: 10px;
+  text-shadow: 0 0 4px #000;
 }
 
+/* Sections */
 section {
   padding: 80px 20px;
   max-width: 960px;
@@ -48,8 +54,9 @@ section {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 20px;
+  color: #00ffcc;
 }
 
 p, li {
@@ -57,6 +64,7 @@ p, li {
   line-height: 1.6;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   background: linear-gradient(90deg, #7b61ff, #2d85f3);
@@ -70,6 +78,7 @@ p, li {
   cursor: pointer;
 }
 
+/* Form */
 .form-group {
   margin-bottom: 20px;
 }
@@ -83,6 +92,7 @@ input, textarea {
   border-radius: 6px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 40px;
@@ -91,16 +101,20 @@ footer {
   background-color: #000;
 }
 
+/* Lottie animation container */
 .lottie-container {
   max-width: 600px;
   margin: 0 auto 40px auto;
 }
 
+/* Responsive image */
 img.responsive {
   width: 100%;
   border-radius: 10px;
   margin-top: 20px;
 }
+
+/* === Android SVG Block === */
 .android-hero {
   display: flex;
   justify-content: center;
