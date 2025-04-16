@@ -16,21 +16,23 @@ body, html {
   z-index: 1;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 header {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index: 10; /* добавлено */
-  color: white; /* добавлено */
-  background: transparent;
+  z-index: 10;
+  color: white;
+  font-family: 'Share Tech Mono', monospace;
 }
 
-h1 {
-  font-size: 48px;
-  font-weight: 700;
-  margin: 0;
+h1, .typed-text {
+  color: #00ff00;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+  font-size: 28px;
 }
 
 .typed-text {
