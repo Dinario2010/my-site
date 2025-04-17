@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -16,7 +16,7 @@ body {
   color: #111;
 }
 
-/* 🌌 Hero с анимированным фоном */
+/* 🌌 Космический фон */
 .hero-space {
   position: relative;
   height: 100vh;
@@ -29,7 +29,6 @@ body {
   background: #000;
 }
 
-/* Звёзды */
 .background-stars {
   position: absolute;
   top: 0; left: 0;
@@ -50,31 +49,15 @@ body {
   bottom: -150px;
 }
 
-.background-stars li:nth-child(1) {
-  left: 25%; width: 80px; height: 80px; animation-delay: 0s;
-}
-.background-stars li:nth-child(2) {
-  left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s;
-}
-.background-stars li:nth-child(3) {
-  left: 70%; width: 20px; height: 20px; animation-delay: 4s;
-}
-.background-stars li:nth-child(4) {
-  left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s;
-}
-.background-stars li:nth-child(5) {
-  left: 65%; width: 20px; height: 20px; animation-delay: 0s;
-}
+.background-stars li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+.background-stars li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+.background-stars li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+.background-stars li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+.background-stars li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
 
 @keyframes animate {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px) rotate(720deg);
-    opacity: 0;
-  }
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
 }
 
 .hero-content {
@@ -182,7 +165,7 @@ body {
   }
 }
 
-/* Секции */
+/* 🔹 Секции */
 section {
   padding: 60px 20px;
   max-width: 900px;
@@ -233,9 +216,13 @@ h2 {
 }
 
 /* 📩 Форма */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 input {
   width: 100%;
-  max-width: 400px;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -269,7 +256,7 @@ footer {
   text-decoration: underline;
 }
 
-/* 📱 Адаптация */
+/* 📱 Мобильная адаптация */
 @media (max-width: 600px) {
   .hero-content h1 {
     font-size: 28px;
