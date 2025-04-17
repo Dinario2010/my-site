@@ -4,26 +4,98 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIстратегия — Внедрение ИИ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Lottie плеер -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+  <!-- Шрифт -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS-анимации -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Lottie player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f7f9fc;
+      color: #1a1a1a;
+    }
+
+    section {
+      text-align: center;
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-top: 60px;
+      color: #2b72ff;
+    }
+
+    h2 {
+      font-size: 32px;
+      color: #2b72ff;
+    }
+
+    p, li {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    ul, ol {
+      text-align: left;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #2b72ff;
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input, textarea {
+      width: 100%;
+      max-width: 600px;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    .lottie {
+      max-width: 600px;
+      margin: 40px auto;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background-color: #eaeaea;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
 
-<header data-aos="fade-down">
-  <h1>AIстратегия</h1>
-  <p class="subtitle">Интеллектуальные решения для вашего бизнеса</p>
-</header>
+<h1 data-aos="fade-down">AIстратегия</h1>
+<p style="text-align:center;" data-aos="fade-up">Интеллектуальные решения для вашего бизнеса</p>
 
 <section data-aos="fade-up">
   <h2>Почему AIстратегия?</h2>
   <p>Мы внедряем ИИ в любые процессы: от малого бизнеса до корпораций. Анализ, выбор технологий, обучение моделей и поддержка — под ключ.</p>
 </section>
 
+<!-- Анимация 1 -->
 <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_3rwasyjy.json"
   background="transparent" speed="1" loop autoplay class="lottie" data-aos="fade-up">
 </lottie-player>
@@ -38,7 +110,8 @@
   </ul>
 </section>
 
-<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_3rwasyjy.json"
+<!-- Анимация 2 -->
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"
   background="transparent" speed="1" loop autoplay class="lottie" data-aos="fade-up">
 </lottie-player>
 
@@ -53,7 +126,8 @@
   </ol>
 </section>
 
-<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"
+<!-- Анимация 3 -->
+<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_KvK0ZJBQIw.json"
   background="transparent" speed="1" loop autoplay class="lottie" data-aos="fade-up">
 </lottie-player>
 
@@ -62,12 +136,13 @@
   <form>
     <input type="text" placeholder="Ваше имя" required /><br />
     <input type="email" placeholder="Email" required /><br />
-    <textarea placeholder="Опишите задачу" rows="4"></textarea><br />
+    <textarea placeholder="Опишите вашу задачу" rows="4" required></textarea><br />
     <button type="submit" class="btn">Отправить</button>
   </form>
 </section>
 
-<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_KvK0ZJBQIw.json"
+<!-- Анимация 4 -->
+<lottie-player src="https://assets4.lottiefiles.com/packages/lf20_gbfwtkzw.json"
   background="transparent" speed="1" loop autoplay class="lottie" data-aos="fade-up">
 </lottie-player>
 
@@ -75,9 +150,11 @@
   © 2025 AIстратегия. Все права защищены.
 </footer>
 
+<!-- AOS анимации -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({ once: true, duration: 1000 });
 </script>
+
 </body>
 </html>
