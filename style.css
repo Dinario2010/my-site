@@ -50,6 +50,11 @@ body {
   to {
     background-position: 1000px 1000px;
   }
+  }
+.hero-space::after {
+  background-image: radial-gradient(white 1px, transparent 1px);
+  animation: star-move 60s linear infinite;
+
 }
 
 .hero-content {
