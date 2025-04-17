@@ -6,26 +6,21 @@
   <title>AIстратегия — Внедрение ИИ</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- HERO -->
-<div class="hero-container" data-aos="fade-down">
-  <div class="cube-wrap">
-    <div class="cube">
-      <div></div><div></div><div></div><div></div><div></div><div></div>
-    </div>
-  </div>
-  <div class="hero-text">
-    <h1>AIстратегия</h1>
-    <p class="typed-text">Интеллектуальные решения для вашего бизнеса</p>
-  </div>
+<div id="vanta-bg">
+  <header data-aos="fade-down">
+    <h1 id="typed-text"></h1>
+    <div class="typed-text">Интеллектуальные решения для вашего бизнеса</div>
+  </header>
 </div>
 
-<!-- Основной контент -->
 <section data-aos="fade-up">
   <h2>Почему AIстратегия?</h2>
   <p>Мы создаём и внедряем ИИ в любые процессы — от маркетинга до автоматизации. Помогаем бизнесу оптимизировать ресурсы, принимать стратегические решения на основе данных и внедрять технологии будущего уже сегодня.</p>
@@ -75,15 +70,30 @@
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
 <script>
   AOS.init({ once: true, duration: 1000 });
 
-  new Typed('.typed-text', {
-    strings: ['Интеллектуальные решения для вашего бизнеса', 'ИИ под ваши задачи', 'Будущее начинается сегодня'],
-    typeSpeed: 40,
-    backSpeed: 20,
-    backDelay: 2000,
+  new Typed('#typed-text', {
+    strings: ['AIстратегия', 'ИИ для вашего бизнеса', 'Будущее начинается сегодня'],
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 1500,
     loop: true
+  });
+
+  VANTA.NET({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 500.00,
+    minWidth: 200.00,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color: 0x7b61ff,
+    backgroundColor: 0x0b0e11
   });
 </script>
 
