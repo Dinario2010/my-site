@@ -2,55 +2,146 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: #f7f9fc;
-  color: #1a1a1a;
+  color: #111;
 }
 
-/* Навигация */
-.top-nav {
-  background: #fff;
+/* 🌌 Космический фон */
+.hero-space {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-space::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 12px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  color: #eee;
+}
+
+.btn {
+  background-color: #2b72ff;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #1e5ed9;
+}
+
+/* 🧭 Меню */
+.nav-header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   padding: 15px 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.top-nav nav {
+.nav-logo {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav-menu {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
-.top-nav a {
+.nav-menu a {
+  color: white;
   text-decoration: none;
-  color: #2b72ff;
-  font-weight: 500;
   font-size: 15px;
   transition: 0.3s ease;
 }
 
-.top-nav a:hover {
-  color: #0044cc;
+.nav-menu a:hover {
+  color: #69a9ff;
 }
 
-/* Фоны */
-.section-light {
-  background-color: #ffffff;
+.nav-toggle {
+  display: none;
 }
 
-.section-dark {
-  background-color: #f1f3f6;
+.nav-toggle-label {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
 }
 
-/* Контент */
+/* 📱 Адаптивность меню */
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
+    display: flex;
+  }
+}
+
+/* 🔹 Секции */
 section {
   padding: 60px 20px;
   max-width: 900px;
@@ -68,7 +159,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .feature h3 {
@@ -83,50 +174,18 @@ h2 {
   line-height: 1.6;
 }
 
-/* Hero */
-.hero-frame__content {
-  max-width: 700px;
-  margin: 0 auto;
+/* 🔘 Цвет секций */
+.section-light {
+  background-color: #ffffff;
+  color: #111;
 }
 
-.hero-frame__title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
+.section-dark {
+  background-color: #f1f3f6;
+  color: #111;
 }
 
-.hero-frame__subtitle {
-  font-size: 18px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 30px;
-}
-
-.hero-frame__button {
-  background-color: #0057ff;
-  color: white;
-  padding: 14px 36px;
-  font-size: 16px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.hero-frame__button:hover {
-  background-color: #0043d6;
-}
-
-/* Lottie */
-.lottie {
-  max-width: 600px;
-  margin: 20px auto;
-  display: block;
-}
-
-/* Form */
+/* 📩 Форма */
 input {
   width: 100%;
   max-width: 400px;
@@ -138,22 +197,16 @@ input {
   font-size: 16px;
 }
 
-.btn {
-  background-color: #2b72ff;
-  color: white;
-  padding: 14px 30px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
+form .btn {
+  margin-top: 10px;
 }
 
-/* Footer */
+/* 🧾 Футер */
 footer {
-  text-align: center;
   padding: 50px 20px;
   font-size: 15px;
   line-height: 1.7;
+  text-align: center;
 }
 
 .footer-info p {
@@ -161,7 +214,7 @@ footer {
 }
 
 .footer-info a {
-  color: #0057ff;
+  color: #2b72ff;
   text-decoration: none;
 }
 
@@ -169,18 +222,17 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive */
+/* 📱 Моб. адаптация */
 @media (max-width: 600px) {
-  .hero-frame__title {
+  .hero-content h1 {
     font-size: 28px;
   }
 
-  .hero-frame__subtitle {
+  .hero-content p {
     font-size: 16px;
   }
 
-  .top-nav nav {
-    flex-direction: column;
-    gap: 10px;
+  .nav-menu {
+    font-size: 14px;
   }
 }
