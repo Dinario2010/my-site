@@ -73,12 +73,10 @@ input, textarea {
   font-size: 16px;
 }
 
-.illustration {
-  display: block;
+.lottie {
+  max-width: 600px;
   margin: 40px auto;
-  max-width: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  display: block;
 }
 
 footer {
