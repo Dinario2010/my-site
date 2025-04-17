@@ -12,7 +12,7 @@ body {
   color: #1a1a1a;
 }
 
-/* 🟦 Новый блок */
+/* Hero */
 .hero-frame {
   background-color: #96bce3;
   border-radius: 20px;
@@ -55,7 +55,7 @@ body {
   background-color: #0043d6;
 }
 
-/* Стандартные секции */
+/* Контент */
 section {
   text-align: center;
   padding: 60px 20px;
@@ -79,9 +79,10 @@ ul, ol {
   margin-top: 20px;
 }
 
-input, textarea {
+/* Форма */
+input {
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   padding: 12px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -105,9 +106,25 @@ input, textarea {
   display: block;
 }
 
+/* Footer */
 footer {
+  background-color: #f8f9fa;
+  color: #333;
   text-align: center;
-  padding: 40px;
-  background-color: #eaeaea;
-  color: #555;
+  padding: 50px 20px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.footer-info p {
+  margin: 8px 0;
+}
+
+.footer-info a {
+  color: #0057ff;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
 }
