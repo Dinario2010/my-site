@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AIстратегия — ИИ для бизнеса</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
-<!-- 🧭 Меню -->
+<!-- Навигация -->
 <header class="nav-header">
   <div class="nav-logo">AIстратегия</div>
   <input type="checkbox" id="nav-toggle" class="nav-toggle" />
@@ -22,8 +24,8 @@
   </nav>
 </header>
 
-<!-- 🌌 Hero -->
-<section id="hero" class="hero-space">
+<!-- Hero -->
+<section id="hero" class="hero-space" data-aos="fade-in">
   <div class="hero-content">
     <h1>ИИ — ваш прорыв в будущее</h1>
     <p>Внедрите искусственный интеллект в бизнес уже сегодня и опередите конкурентов завтра.</p>
@@ -31,8 +33,8 @@
   </div>
 </section>
 
-<!-- 🔹 Зачем ИИ -->
-<section id="why" class="section-light">
+<!-- Зачем ИИ -->
+<section id="why" class="section-light" data-aos="fade-up">
   <h2>Зачем вашему бизнесу ИИ?</h2>
   <div class="features">
     <div class="feature">
@@ -54,8 +56,11 @@
   </div>
 </section>
 
-<!-- 🔹 Примеры -->
-<section id="cases" class="section-dark">
+<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_3rwasyjy.json"
+  background="transparent" speed="1" loop autoplay class="lottie" data-aos="zoom-in"></lottie-player>
+
+<!-- Примеры -->
+<section id="cases" class="section-dark" data-aos="fade-up">
   <h2>Примеры применения ИИ</h2>
   <div class="features">
     <div class="feature">
@@ -77,8 +82,11 @@
   </div>
 </section>
 
-<!-- 🔹 Этапы -->
-<section id="process" class="section-light">
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_jcikwtux.json"
+  background="transparent" speed="1" loop autoplay class="lottie" data-aos="zoom-in"></lottie-player>
+
+<!-- Этапы -->
+<section id="process" class="section-light" data-aos="fade-up">
   <h2>Как мы работаем</h2>
   <div class="features">
     <div class="feature">
@@ -104,8 +112,11 @@
   </div>
 </section>
 
-<!-- 📩 Форма -->
-<section id="form" class="section-dark">
+<lottie-player src="https://assets2.lottiefiles.com/packages/lf20_touohxv0.json"
+  background="transparent" speed="1" loop autoplay class="lottie" data-aos="zoom-in"></lottie-player>
+
+<!-- Форма -->
+<section id="form" class="section-dark" data-aos="fade-up">
   <h2>Оставьте заявку</h2>
   <form action="https://formsubmit.co/5752041@gmail.com" method="POST">
     <input type="text" name="name" placeholder="Ваше имя" required><br />
@@ -117,8 +128,8 @@
   </form>
 </section>
 
-<!-- 🧾 Футер -->
-<footer class="section-light">
+<!-- Футер -->
+<footer class="section-light" data-aos="fade-up">
   <div class="footer-info">
     <p><strong>AIстратегия</strong></p>
     <p>ИНН 1650437696</p>
@@ -128,6 +139,17 @@
     <p>Пн–Пт с 10:00 до 18:00</p>
   </div>
 </footer>
+
+<!-- JS: плавный скролл + AOS + автозакрытие меню -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 1000 });
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('nav-toggle').checked = false;
+    });
+  });
+</script>
 
 </body>
 </html>
