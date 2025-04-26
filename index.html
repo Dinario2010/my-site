@@ -18,94 +18,111 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-  <!-- Навигация (без изменений, но можно добавить анимацию для мобильного меню) -->
+  <!-- Навигация -->
   <header class="nav-header">
     <div class="nav-logo">AIстратегия</div>
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label">☰</label>
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span class="hamburger">☰</span>
+    </label>
     <nav class="nav-menu">
       <a href="#hero">Главная</a>
       <a href="#why">Зачем ИИ</a>
       <a href="#cases">Примеры</a>
       <a href="#process">Этапы</a>
-      <a href="#form">Контакты</a>
+      <a href="#form" class="nav-cta">Контакты</a>
     </nav>
   </header>
 
-  <!-- Hero с новым фоном и анимацией -->
+  <!-- Hero -->
   <section id="hero" class="hero-space" data-aos="fade-in">
-    <div class="hero-background"></div>
+    <div class="hero-background">
+      <div class="particles"></div>
+    </div>
     <div class="hero-content">
-      <h1 data-aos="fade-up">Автоматизируйте бизнес с ИИ и увеличьте прибыль на 30%</h1>
-      <p data-aos="fade-up" data-aos-delay="200">Внедряем искусственный интеллект, чтобы сократить затраты, повысить продажи и опередить конкурентов.</p>
-      <a href="#form" class="btn btn-gradient" data-aos="fade-up" data-aos-delay="400">Получить консультацию</a>
+      <h1 data-aos="fade-up">
+        Автоматизируйте бизнес с ИИ и увеличьте <span class="highlight">прибыль на 30%</span>
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        Внедряем искусственный интеллект, чтобы сократить затраты, повысить продажи и опередить конкурентов.
+      </p>
+      <button class="btn btn-gradient" data-modal-open="consultation-form" data-aos="fade-up" data-aos-delay="400">
+        Получить консультацию
+      </button>
     </div>
-    <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_klsj3t.json" background="transparent" speed="1" loop autoplay class="hero-lottie" data-aos="zoom-in"></lottie-player>
+    <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_klsj3t.json" background="transparent" speed="1" loop autoplay class="hero-lottie" data-aos="zoom-in" loading="lazy"></lottie-player>
   </section>
 
-  <!-- Зачем ИИ с иконками -->
-  <section id="why" class="section-light" data-aos="fade-up">
-    <h2>Зачем вашему бизнесу ИИ?</h2>
-    <div class="features grid">
-      <div class="feature" data-aos="fade-up" data-aos-delay="100">
-        <div class="feature-icon">💰</div>
-        <h3>Снижение затрат</h3>
-        <p>Автоматизируйте рутину: заявки, бухгалтерию, поддержку. Сократите расходы до 40%.</p>
-      </div>
-      <div class="feature" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-icon">📈</div>
-        <h3>Рост прибыли</h3>
-        <p>ИИ прогнозирует спрос и персонализирует предложения, увеличивая продажи на 25%.</p>
-      </div>
-      <div class="feature" data-aos="fade-up" data-aos-delay="300">
-        <div class="feature-icon">⚡</div>
-        <h3>Быстрые решения</h3>
-        <p>Анализ данных в реальном времени для точных и оперативных решений.</p>
-      </div>
-      <div class="feature" data-aos="fade-up" data-aos-delay="400">
-        <div class="feature-icon">🏆</div>
-        <h3>Опережение конкурентов</h3>
-        <p>Станьте лидером рынка с передовыми ИИ-технологиями.</p>
-      </div>
+  <!-- Модальное окно -->
+  <div class="modal" id="consultation-form">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>Оставьте заявку</h2>
+      <p>Расскажите о вашем бизнесе, и мы предложим лучшие ИИ-решения.</p>
+      <form action="https://formsubmit.co/5752041@gmail.com" method="POST" class="form-grid">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" name="phone" placeholder="Номер телефона" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Опишите вашу задачу" rows="4"></textarea>
+        <input type="hidden" name="_subject" value="Новая заявка с сайта AIстратегия">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit" class="btn btn-gradient">Отправить</button>
+      </form>
     </div>
-    <a href="#form" class="btn btn-gradient center" data-aos="fade-up">Узнать больше</a>
-  </section>
+  </div>
 
-  <!-- Форма -->
-  <section id="form" class="section-dark" data-aos="fade-up">
-    <h2>Оставьте заявку</h2>
-    <p>Расскажите о вашем бизнесе, и мы предложим лучшие ИИ-решения.</p>
-    <form action="https://formsubmit.co/5752041@gmail.com" method="POST" class="form-grid">
-      <input type="text" name="name" placeholder="Ваше имя" required>
-      <input type="tel" name="phone" placeholder="Номер телефона" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Опишите вашу задачу" rows="4"></textarea>
-      <input type="hidden" name="_subject" value="Новая заявка с сайта AIстратегия">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <button type="submit" class="btn btn-gradient">Отправить</button>
-    </form>
-  </section>
-
-  <!-- Футер (без изменений) -->
-  <footer class="section-light" data-aos="fade-up">
-    <div class="footer-info">
-      <p><strong>AIстратегия</strong></p>
-      <p>ИНН 1650437696</p>
-      <p><strong>+7 987 270-06-55</strong></p>
-      <p>Набережные Челны, Машиностроительная улица, 91, ИТ-парк</p>
-      <p><a href="mailto:info@aistrategy.ru">info@aistrategy.ru</a></p>
-      <p>Пн–Пт с 10:00 до 18:00</p>
+  <!-- Социальное доказательство -->
+  <section class="social-proof" data-aos="fade-up">
+    <div class="proof-item">
+      <span class="proof-icon">🏆</span>
+      <p>10+ лет опыта в ИИ</p>
     </div>
-  </footer>
+    <div class="proof-item">
+      <span class="proof-icon">👥</span>
+      <p>50+ довольных клиентов</p>
+    </div>
+    <div class="proof-item">
+      <span class="proof-icon">📈</span>
+      <p>30% рост прибыли</p>
+    </div>
+  </section>
 
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, duration: 1000 });
+
+    // Закрытие мобильного меню при клике на ссылку
     document.querySelectorAll('.nav-menu a').forEach(link => {
       link.addEventListener('click', () => {
         document.getElementById('nav-toggle').checked = false;
+      });
+    });
+
+    // Модальное окно
+    const modalTriggers = document.querySelectorAll('[data-modal-open]');
+    const modals = document.querySelectorAll('.modal');
+    const modalCloses = document.querySelectorAll('.modal-close');
+
+    modalTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const modalId = trigger.getAttribute('data-modal-open');
+        document.getElementById(modalId).classList.add('active');
+      });
+    });
+
+    modalCloses.forEach(close => {
+      close.addEventListener('click', () => {
+        modals.forEach(modal => modal.classList.remove('active'));
+      });
+    });
+
+    window.addEventListener('click', (e) => {
+      modals.forEach(modal => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+        }
       });
     });
   </script>
