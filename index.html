@@ -18,21 +18,33 @@
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-  <!-- Навигация -->
-  <header class="nav-header">
-    <div class="nav-logo">AIстратегия</div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span class="hamburger">☰</span>
-    </label>
-    <nav class="nav-menu">
-      <a href="#hero">Главная</a>
-      <a href="#why">Зачем ИИ</a>
-      <a href="#cases">Примеры</a>
-      <a href="#process">Этапы</a>
-      <a href="#form" class="nav-cta">Контакты</a>
-    </nav>
+  <!-- Навигация с новым бургер-меню -->
+  <header class="cd-header">
+    <div class="header-wrapper">
+      <div class="logo-wrap">
+        <a href="#" class="hover-target">AIстратегия</a>
+      </div>
+      <div class="nav-but-wrap">
+        <div class="menu-icon hover-target">
+          <span class="menu-icon__line menu-icon__line-left"></span>
+          <span class="menu-icon__line"></span>
+          <span class="menu-icon__line menu-icon__line-right"></span>
+        </div>
+      </div>
+    </div>
   </header>
+
+  <div class="nav">
+    <div class="nav__content">
+      <ul class="nav__list">
+        <li class="nav__list-item active-nav"><a href="#hero" class="hover-target">Главная</a></li>
+        <li class="nav__list-item"><a href="#why" class="hover-target">Зачем ИИ</a></li>
+        <li class="nav__list-item"><a href="#cases" class="hover-target">Примеры</a></li>
+        <li class="nav__list-item"><a href="#process" class="hover-target">Этапы</a></li>
+        <li class="nav__list-item"><a href="#form" class="hover-target">Контакты</a></li>
+      </ul>
+    </div>
+  </div>
 
   <!-- Hero -->
   <section id="hero" class="hero-space" data-aos="fade-in">
@@ -44,7 +56,7 @@
         Автоматизируйте бизнес с ИИ и увеличьте <span class="highlight">прибыль на 30%</span>
       </h1>
       <p data-aos="fade-up" data-aos-delay="200">
-        Внедряем искусственный интеллект, чтобы сократить затраты, повысить продажи и опередить конкурентов.
+        Мы внедряем искусственный интеллект, чтобы помочь вашему бизнесу сократить затраты, повысить эффективность процессов и опередить конкурентов. Используйте передовые технологии уже сегодня, чтобы обеспечить рост завтра!
       </p>
       <button class="btn btn-gradient" data-modal-open="consultation-form" data-aos="fade-up" data-aos-delay="400">
         Получить консультацию
@@ -52,25 +64,6 @@
     </div>
     <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_klsj3t.json" background="transparent" speed="1" loop autoplay class="hero-lottie" data-aos="zoom-in" loading="lazy"></lottie-player>
   </section>
-
-  <!-- Модальное окно -->
-  <div class="modal" id="consultation-form">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <h2>Оставьте заявку</h2>
-      <p>Расскажите о вашем бизнесе, и мы предложим лучшие ИИ-решения.</p>
-      <form action="https://formsubmit.co/5752041@gmail.com" method="POST" class="form-grid">
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="tel" name="phone" placeholder="Номер телефона" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Опишите вашу задачу" rows="4"></textarea>
-        <input type="hidden" name="_subject" value="Новая заявка с сайта AIстратегия">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit" class="btn btn-gradient">Отправить</button>
-      </form>
-    </div>
-  </div>
 
   <!-- Социальное доказательство -->
   <section class="social-proof" data-aos="fade-up">
@@ -88,43 +81,197 @@
     </div>
   </section>
 
+  <!-- Зачем ИИ -->
+  <section id="why" class="section-light" data-aos="fade-up">
+    <h2>Зачем вашему бизнесу ИИ?</h2>
+    <p class="section-intro">
+      Искусственный интеллект — это не будущее, а реальность, которая уже трансформирует бизнесы по всему миру. Вот как ИИ может помочь именно вам:
+    </p>
+    <div class="features grid">
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon">💰</div>
+        <h3>Снижение затрат</h3>
+        <p>Автоматизируйте рутинные процессы, такие как обработка заявок, ведение бухгалтерии или клиентская поддержка. Например, внедрение чат-бота сократило расходы на поддержку клиентов у нашего клиента на 40%.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon">📈</div>
+        <h3>Рост прибыли</h3>
+        <p>ИИ анализирует данные клиентов и предлагает персонализированные решения, увеличивая конверсии. Один из наших клиентов увеличил продажи на 25% за счёт внедрения рекомендательной системы.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon">⚡</div>
+        <h3>Быстрые решения</h3>
+        <p>ИИ обрабатывает большие объёмы данных в реальном времени, помогая принимать решения быстрее и точнее. Например, прогнозирование спроса сократило складские издержки для ритейлера на 15%.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="400">
+        <div class="feature-icon">🏆</div>
+        <h3>Опережение конкурентов</h3>
+        <p>Станьте технологическим лидером в своей нише, внедряя ИИ раньше конкурентов. Компании, использующие ИИ, получают преимущество в скорости и качестве решений.</p>
+      </div>
+    </div>
+    <button class="btn btn-gradient center" data-modal-open="consultation-form" data-aos="fade-up">Узнать, как ИИ поможет вашему бизнесу</button>
+  </section>
+
+  <!-- Почему выбирают нас -->
+  <section id="why-us" class="section-dark" data-aos="fade-up">
+    <h2>Почему выбирают AIстратегию?</h2>
+    <p class="section-intro">
+      Мы — команда экспертов в области искусственного интеллекта, которые знают, как технологии могут работать на ваш бизнес. Вот почему нам доверяют:
+    </p>
+    <div class="features grid">
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon">🛠️</div>
+        <h3>Индивидуальный подход</h3>
+        <p>Мы анализируем ваш бизнес и разрабатываем решения, которые идеально подходят именно вам, а не используем шаблонные подходы.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon">🔧</div>
+        <h3>Полная поддержка</h3>
+        <p>После внедрения мы продолжаем сопровождать проект, обновлять модели и масштабировать решения по мере роста вашего бизнеса.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon">📊</div>
+        <h3>Проверенные результаты</h3>
+        <p>Наши клиенты уже достигли значительных результатов: от сокращения затрат на 40% до увеличения продаж на 30%.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Примеры -->
+  <section id="cases" class="section-light" data-aos="fade-up">
+    <h2>Примеры применения ИИ</h2>
+    <p class="section-intro">
+      ИИ уже помогает бизнесам в самых разных отраслях. Вот несколько примеров, как наши решения изменили работу компаний:
+    </p>
+    <div class="features grid">
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
+        <h3>Маркетинг</h3>
+        <p>ИИ анализирует поведение клиентов и создаёт персонализированные кампании. Например, интернет-магазин увеличил вовлечённость на 20% с помощью таргетированных email-рассылок.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <h3>Продажи</h3>
+        <p>Модели ИИ прогнозируют спрос и помогают менеджерам сосредоточиться на тёплых лидах. Один из наших клиентов увеличил конверсию на 15% благодаря автоматизации воронки продаж.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <h3>HR</h3>
+        <p>Автоматизация подбора персонала: ИИ анализирует резюме, фильтрует кандидатов и оценивает их навыки. Компания из сферы IT сократила время найма на 30%.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="400">
+        <h3>Аналитика</h3>
+        <p>ИИ строит отчёты, выявляет тренды и прогнозирует KPI. Производственная компания сэкономила 25 часов в месяц на аналитике благодаря автоматизации.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section id="reviews" class="section-dark" data-aos="fade-up">
+    <h2>Что говорят наши клиенты</h2>
+    <p class="section-intro">
+      Мы гордимся тем, что помогаем бизнесам достигать новых высот с помощью ИИ. Вот что говорят наши клиенты:
+    </p>
+    <div class="reviews-grid">
+      <div class="review" data-aos="fade-up" data-aos-delay="100">
+        <p>"AIстратегия помогла нам внедрить ИИ для автоматизации продаж. Результат — рост конверсий на 25% за 3 месяца!"</p>
+        <h4>Иван Петров, CEO TechCorp</h4>
+      </div>
+      <div class="review" data-aos="fade-up" data-aos-delay="200">
+        <p>"Благодаря автоматизации HR-процессов мы сократили время на подбор персонала на 30%. Отличная работа!"</p>
+        <h4>Анна Смирнова, HR Lead</h4>
+      </div>
+      <div class="review" data-aos="fade-up" data-aos-delay="300">
+        <p>"ИИ-решения для аналитики сэкономили нам 20 часов в неделю. Теперь мы принимаем решения быстрее и точнее."</p>
+        <h4>Михаил Иванов, Data Analyst</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Этапы -->
+  <section id="process" class="section-light" data-aos="fade-up">
+    <h2>Как мы работаем</h2>
+    <p class="section-intro">
+      Мы разработали чёткий и прозрачный процесс внедрения ИИ, который гарантирует результат. Вот как это происходит:
+    </p>
+    <div class="features grid">
+      <div class="feature" data-aos="fade-up" data-aos-delay="100">
+        <h3>1. Консультация</h3>
+        <p>Мы проводим глубокий анализ вашего бизнеса, выявляем ключевые задачи и определяем, где ИИ принесёт максимальную пользу.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="200">
+        <h3>2. Постановка целей</h3>
+        <p>Собираем требования, оцениваем доступные ресурсы и подбираем оптимальные инструменты для достижения ваших целей.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="300">
+        <h3>3. Обучение модели</h3>
+        <p>Разрабатываем и обучаем ИИ-модель на ваших данных, проводим тестирование, чтобы обеспечить точность и эффективность.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="400">
+        <h3>4. Внедрение</h3>
+        <p>Интегрируем ИИ в ваши бизнес-процессы, настраиваем интерфейсы и API для удобной работы.</p>
+      </div>
+      <div class="feature" data-aos="fade-up" data-aos-delay="500">
+        <h3>5. Поддержка</h3>
+        <p>Обеспечиваем сопровождение: обновляем модели, масштабируем решения и помогаем адаптироваться к новым вызовам.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма -->
+  <section id="form" class="section-dark" data-aos="fade-up">
+    <h2>Оставьте заявку</h2>
+    <p class="section-intro">
+      Хотите узнать, как ИИ может помочь вашему бизнесу? Оставьте заявку, и мы свяжемся с вами в течение 24 часов для бесплатной консультации.
+    </p>
+    <form action="https://formsubmit.co/5752041@gmail.com" method="POST" class="form-grid">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="tel" name="phone" placeholder="Номер телефона" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Опишите вашу задачу" rows="4"></textarea>
+      <input type="hidden" name="_subject" value="Новая заявка с сайта AIстратегия">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit" class="btn btn-gradient">Отправить</button>
+    </form>
+  </section>
+
+  <!-- Футер -->
+  <footer class="section-light" data-aos="fade-up">
+    <div class="footer-info">
+      <p><strong>AIстратегия</strong></p>
+      <p>ИНН 1650437696</p>
+      <p><strong>+7 987 270-06-55</strong></p>
+      <p>Набережные Челны, Машиностроительная улица, 91, ИТ-парк</p>
+      <p><a href="mailto:info@aistrategy.ru">info@aistrategy.ru</a></p>
+      <p>Пн–Пт с 10:00 до 18:00</p>
+    </div>
+  </footer>
+
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ once: true, duration: 1000 });
 
-    // Закрытие мобильного меню при клике на ссылку
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('nav-toggle').checked = false;
-      });
-    });
-
-    // Модальное окно
-    const modalTriggers = document.querySelectorAll('[data-modal-open]');
-    const modals = document.querySelectorAll('.modal');
-    const modalCloses = document.querySelectorAll('.modal-close');
-
-    modalTriggers.forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        const modalId = trigger.getAttribute('data-modal-open');
-        document.getElementById(modalId).classList.add('active');
-      });
-    });
-
-    modalCloses.forEach(close => {
-      close.addEventListener('click', () => {
-        modals.forEach(modal => modal.classList.remove('active'));
-      });
-    });
-
-    window.addEventListener('click', (e) => {
-      modals.forEach(modal => {
-        if (e.target === modal) {
-          modal.classList.remove('active');
-        }
-      });
-    });
+    // Навигация
+    var app = function () {
+      var body = undefined;
+      var menu = undefined;
+      var menuItems = undefined;
+      var init = function init() {
+        body = document.querySelector('body');
+        menu = document.querySelector('.menu-icon');
+        menuItems = document.querySelectorAll('.nav__list-item');
+        applyListeners();
+      };
+      var applyListeners = function applyListeners() {
+        menu.addEventListener('click', function () {
+          return toggleClass(body, 'nav-active');
+        });
+      };
+      var toggleClass = function toggleClass(element, stringClass) {
+        if (element.classList.contains(stringClass)) element.classList.remove(stringClass);
+        else element.classList.add(stringClass);
+      };
+      init();
+    }();
   </script>
 </body>
 </html>
