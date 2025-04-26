@@ -16,6 +16,92 @@ body {
   color: #111;
 }
 
+/* Навигация */
+.nav-header {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ff6b6b;
+}
+
+.nav-cta {
+  background: linear-gradient(45deg, #2b72ff, #ff6b6b);
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.nav-cta:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle-label {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-toggle:checked ~ .nav-menu {
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+
 /* Hero */
 .hero-space {
   position: relative;
@@ -34,14 +120,22 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://dinario2010.github.io/my-site/neural-bg.jpg') center/cover no-repeat;
-  opacity: 0.3;
-  animation: pulse 10s infinite;
+  overflow: hidden;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.5; }
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><circle cx="10%" cy="20%" r="2" fill="rgba(255,255,255,0.3)"/><circle cx="80%" cy="30%" r="3" fill="rgba(255,255,255,0.2)"/><circle cx="50%" cy="70%" r="2" fill="rgba(255,255,255,0.4)"/></svg>') center/cover no-repeat;
+  animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
 .hero-content {
@@ -56,6 +150,12 @@ body {
   font-weight: 700;
   color: #fff;
   margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content h1 .highlight {
+  color: #ff6b6b;
+  font-weight: 700;
 }
 
 .hero-content p {
@@ -66,7 +166,7 @@ body {
 }
 
 .hero-lottie {
-  max-width: 300px;
+  max-width: 200px;
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -76,10 +176,12 @@ body {
   background: linear-gradient(45deg, #2b72ff, #ff6b6b);
   color: white;
   padding: 16px 32px;
+  border: none;
   border-radius: 8px;
   font-size: 18px;
   text-decoration: none;
   transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .btn-gradient:hover {
@@ -87,129 +189,58 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.center {
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-}
-
-/* Навигация (добавлена анимация для мобильного меню) */
-.nav-header {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 15px 30px;
+/* Модальное окно */
+.modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.nav-menu {
+.modal.active {
   display: flex;
-  gap: 20px;
-  transition: transform 0.3s ease;
 }
 
-.nav-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-  color: #ff6b6b;
-}
-
-.nav-toggle-label {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-toggle-label {
-    display: block;
-  }
-
-  .nav-menu {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-  }
-
-  .nav-toggle:checked + .nav-toggle-label + .nav-menu {
-    transform: translateY(0);
-  }
-}
-
-/* Секции */
-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 36px;
-  font-weight: 600;
-  color: #2b72ff;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.features.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.feature {
+.modal-content {
   background: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
 }
 
-.feature:hover {
-  transform: translateY(-5px);
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
 }
 
-.feature-icon {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.feature h3 {
-  font-size: 22px;
+.modal-content h2 {
+  font-size: 28px;
   color: #2b72ff;
   margin-bottom: 10px;
 }
 
-.feature p {
+.modal-content p {
   font-size: 16px;
   color: #555;
-  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-/* Форма */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 15px;
-  max-width: 500px;
-  margin: 0 auto;
 }
 
 input, textarea {
@@ -225,8 +256,33 @@ textarea {
   resize: vertical;
 }
 
-.section-dark {
-  background: linear-gradient(135deg, #f1f3f6, #e5e7eb);
+/* Социальное доказательство */
+.social-proof {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: #f7f9fc;
+  flex-wrap: wrap;
+}
+
+.proof-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proof-icon {
+  font-size: 24px;
+}
+
+.proof-item p {
+  font-size: 16px;
+  color: #555;
 }
 
 @media (max-width: 600px) {
@@ -239,6 +295,18 @@ textarea {
   }
 
   .hero-lottie {
-    max-width: 200px;
+    max-width: 150px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .btn-gradient {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .social-proof {
+    flex-direction: column;
+    align-items: center;
   }
 }
